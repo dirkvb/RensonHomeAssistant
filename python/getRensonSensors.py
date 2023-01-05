@@ -24,7 +24,7 @@ class IndentDumper(yaml.Dumper):
         return super(IndentDumper, self).increase_indent(flow, False)
 
 
-# Main function where I querry the url, and loop over rooms and sensors
+# Main function where I query the url, and loop over rooms and sensors
 def main(url):
     # First we just request all the info available
     all_info = requests.get('http://' + url + '/v2/api/data/current')
